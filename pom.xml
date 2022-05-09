@@ -8,7 +8,10 @@
     <groupId>com.yukicris</groupId>
     <artifactId>spring_cloud</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-
+    <modules>
+        <module>springcloud_api</module>
+        <module>springcloud-provider-dept-8001</module>
+    </modules>
 
 
     <!--打包方式-->
@@ -20,7 +23,7 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <junit.version>4.12</junit.version>
-        <lombok.version>1.6.18</lombok.version>
+        <lombok.version>1.16.18</lombok.version>
     </properties>
 
 
@@ -30,7 +33,7 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>Greenwich.SR1</version>
+                <version>Greenwich.RELEASE</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
