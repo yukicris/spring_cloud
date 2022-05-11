@@ -5,9 +5,11 @@ server:
 #Eureka配置
 eureka:
   instance:
-    hostname: localhost # Eureka服务端的实例名称
+    hostname: yukicris1 # Eureka服务端的实例名称
   client:
     register-with-eureka: false  # 表示是否向eureka注册中心注册自己,现在当前应用就是Eureka Server服务器,不需要注册自己
     fetch-registry: false  #如果为false,表示自己为注册中心
     service-url:   # 监控页面
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/   #这里可以点进去看到,下面这个参数有个默认值,所以需要设置自己的
+      #单机 defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/  #这里可以点进去看到,下面这个参数有个默认值,所以需要设置自己的
+      # 集群(多个关联,比如7001关联7002和7003) http://7002的ip:7002/eureka/,http://7002的ip:7002/eureka/   多个用逗号拼接,然后去02和03也互相配置
+      defaultZone: http://yukicris2.com:7002/eureka/,http://yukicris3.com:7003/eureka/

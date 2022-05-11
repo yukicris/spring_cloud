@@ -14,6 +14,19 @@
 
 
     <dependencies>
+
+        <!--加入Eureka的依赖-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-eureka</artifactId>
+            <version>1.4.7.RELEASE</version>
+        </dependency>
+        <!--完善监控信息-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
         <!--我们需要拿到实体类,需要配置api module-->
         <dependency>
             <groupId>com.yukicris</groupId>
@@ -68,6 +81,8 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
         </dependency>
+
+
     </dependencies>
 
 </project>
