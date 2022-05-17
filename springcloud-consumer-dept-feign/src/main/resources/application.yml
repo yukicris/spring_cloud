@@ -8,3 +8,8 @@ eureka:
     register-with-eureka: false   #不向Eureka中注册自己(消费者客户端)
     service-url:
       defaultZone: http://localhost:7001/eureka/,http://localhost:7002/eureka/,http://localhost:7003/eureka/
+
+
+feign:
+  hystrix:
+    enabled: true

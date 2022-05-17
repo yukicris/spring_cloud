@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
-@Component
-@FeignClient(value="SPRINGCLOUD-PROVIDER-DEPT")
+@Component//后面fallback这截是做服务降级的时候用的,如果只是测负载均衡,可以删除
+@FeignClient(value="SPRINGCLOUD-PROVIDER-DEPT",fallbackFactory = DeptClientServiceFallbackFactory.class)
 public interface DeptClientService {
 
 

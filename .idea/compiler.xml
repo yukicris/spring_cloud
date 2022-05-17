@@ -2,19 +2,21 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="springcloud-eureka-7002" />
         <module name="springcloud-consumer-dept-feign" />
         <module name="springcloud-consumer-dept-80" />
         <module name="springcloud-eureka-7003" />
-        <module name="springcloud-eureka-7001" />
-        <module name="springcloud-provider-dept-hystrix-8001" />
-        <module name="springcloud-provider-dept-8003" />
-        <module name="springcloud-provider-dept-8002" />
         <module name="springcloud-provider-dept-8001" />
+        <module name="springcloud-provider-dept-8002" />
+        <module name="springcloud-provider-dept-8003" />
+        <module name="springcloud_consumer-hystrix-dashboard" />
+        <module name="springcloud-provider-dept-hystrix-8001" />
+        <module name="springcloud-eureka-7002" />
+        <module name="springcloud-eureka-7001" />
         <module name="springcloud_api" />
       </profile>
     </annotationProcessing>
@@ -30,6 +32,7 @@
       <module name="springcloud-provider-dept-8003" target="1.8" />
       <module name="springcloud-provider-dept-hystrix-8001" target="1.8" />
       <module name="springcloud_api" target="1.8" />
+      <module name="springcloud_consumer-hystrix-dashboard" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

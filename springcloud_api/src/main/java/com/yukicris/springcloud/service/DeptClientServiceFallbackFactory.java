@@ -13,7 +13,7 @@ public class DeptClientServiceFallbackFactory implements FallbackFactory {
         return new DeptClientService() {
             @Override
             public Dept queryById(Long id) {
-                return new Dept().setDeptno(id).setDname("id="+ "没有对应的信息").setDb_source("没有数据");
+                return new Dept().setDeptno(id).setDname("id="+ "没有对应的信息,已降级,服务暂时关闭").setDb_source("没有数据");
             }
 
             @Override
