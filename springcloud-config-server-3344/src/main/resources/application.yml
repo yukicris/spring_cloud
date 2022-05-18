@@ -1,0 +1,15 @@
+server:
+  port: 3344
+
+spring:
+  application:
+    name: springcloud-config-server
+    #链接远程仓库
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/yukicris/springcloud-config.git  #是https的git
+          default-label: main
+          #通过链接config-server 可以链接到git,访问其中的资源以及配置
+

@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      name: config-clent
+      profile: dev
+      label: main
+      uri: http://localhost:3344
